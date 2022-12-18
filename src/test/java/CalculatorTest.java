@@ -1,31 +1,32 @@
-import org.junit.jupiter.api.Test;
+package src.test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
+import junit.frameworrk.Assert;
 
 class CalculatorTest {
 
     @Test
     void add() {
-        //TODO inser your realisation in test-method add
+        Assert.assertTrue(Calculator.add(2,5) == 7);
     }
 
     @Test
     void dif() {
-        //TODO inser your realisation in test-method dif
+       Assert.assertTrue(Calculator.dif(10,2) == 8);
     }
 
     @Test
     void div() {
-        //TODO inser your realisation in test-method div
+        Assert.assertTrue(Calculator.div(10,2) == 5);
     }
 
     @Test
     void times() {
-        //TODO inser your realisation in test-method times
+        Assert.assertTrue(Calculator.times(10,2) == 20);
     }
 
     @Test
     void solver() {
-        //TODO inser your realisation in test-method solver
+        Assert.assertTrue(Calculator.solver(5, -10) == 2);
     }
 }
