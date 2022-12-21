@@ -13,6 +13,5 @@ public class Calculator {
     }
     public int solver(){
         return times(add(dif(10, 5), div(10,2)), 10);
-
     }
 }
