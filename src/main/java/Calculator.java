@@ -13,5 +13,6 @@ public class Calculator {
     }
     public int solver(int a, int b){
         return (a+b)*(a+b);
+        return a*a + 2*a*b + b*b;
     }
 }
