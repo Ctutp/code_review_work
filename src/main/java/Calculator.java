@@ -1,17 +1,25 @@
 public class Calculator {
     public int add(int a, int b){
-        //TODO inser your realisation in method add
+        int c = a+b;
+        return c;
     }
     public int dif(int a, int b){
-        //TODO inser your realisation in method dif
+        int c = a-b;
+        return c;
     }
     public int div(int a, int b){
-        //TODO inser your realisation in method div
+        int c = a/b;
+        return c;
     }
     public int times(int a, int b){
-        //TODO inser your realisation in method times
+        int c = a*b;
+        return c;
     }
-    public int solver(){
-        //TODO inser your realisation in method solver
+    public int solver(int n){ //factorial
+        int c = 1;
+        for (int i = 1; i <= n; i++){
+            c = times(c,i);
+        }
+        return c;
     }
 }
