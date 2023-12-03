@@ -1,17 +1,20 @@
 public class Calculator {
     public int add(int a, int b){
-        //TODO inser your realisation in method add
+        return a+b;
     }
     public int dif(int a, int b){
-        //TODO inser your realisation in method dif
+       return a-b;
     }
-    public int div(int a, int b){
-        //TODO inser your realisation in method div
+    public int div(int a, int b)throws Exception{
+        if(a==0 || b==0) {
+            throw new Exception("Operation cannot be perfomed");
+        }
+        return a/b;
     }
     public int times(int a, int b){
-        //TODO inser your realisation in method times
+        return a*b;
     }
-    public int solver(){
-        //TODO inser your realisation in method solver
+    public int solver(int a,  int b, int c) throws Exception{
+        return times(a,a)+times(b,b)+add(a,b)+div(a,c)+dif(c,b);
     }
 }
