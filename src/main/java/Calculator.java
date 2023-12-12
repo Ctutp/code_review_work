@@ -20,5 +20,6 @@ public class Calculator {
         //TODO inser your realisation in method solver
         return div(times(add(2,3), 3), 5);
 
+
     }
 }

@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class CalculatorTest {
     Calculator calculator = new Calculator();
 
+    Calculator calculator = new Calculator();
+
     @Test
     void add() {
         //TODO inser your realisation in test-method add
@@ -15,7 +17,6 @@ class CalculatorTest {
     void dif() {
         //TODO inser your realisation in test-method dif
         assertEquals(2,calculator.dif(5,3));
-
     }
 
     @Test
