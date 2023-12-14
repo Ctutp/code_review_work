@@ -36,6 +36,7 @@ public class Calculator {
                 break;
             default:
                 System.out.println("Operation not supported");
+
         }
         return result;
     }
