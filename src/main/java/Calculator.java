@@ -6,7 +6,7 @@ public class Calculator {
         //TODO inser your realisation in method dif
     }
     public int div(int a, int b){
-        //TODO inser your realisation in method div
+        return a/b;
     }
     public int times(int a, int b){
         //TODO inser your realisation in method times
