@@ -20,6 +20,6 @@ public class Calculator {
 	}
 
 	public int solver() {
-		return 0;
+		return 228;
 	}
 }
