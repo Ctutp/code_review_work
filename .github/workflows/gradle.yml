@@ -1,0 +1,38 @@
+name: Java CI with Gradle
+
+on:
+  push:
+    branches: [ "main", "zlatkinaea" ]
+  pull_request:
+    branches: [ "main", "zlatkinaea" ]
+  schedule:
+    - cron: '30 12 * * 3'
+    - cron: '0 22 * * 5'
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        java-version: [11, 17, 21]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK ${{ matrix.java-version }}
+        uses: actions/setup-java@v3
+        with:
+          java-version: ${{ matrix.java-version }}
+          distribution: 'temurin'
+
+      - name: Make gradlew executable (Linux/macOS)
+        if: runner.os != 'Windows'
+        run: chmod +x ./gradlew
+
+      - name: Make gradlew executable (Windows)
+        if: runner.os == 'Windows'
+        run: icacls gradlew /grant Everyone:RX
+
+      - name: Build with Gradle
+        run: ./gradlew build
